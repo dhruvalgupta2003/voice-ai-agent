@@ -1,4 +1,8 @@
 .venv
-__pycache
 .env
 logs
+# Ignore all Python cache directories and compiled bytecode
+**/__pycache__/
+*.py[cod]
+input_audios
+backup_call_records

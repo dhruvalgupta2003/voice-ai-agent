@@ -17,6 +17,7 @@ dependencies = [
     "numpy>=2.0.2",
     "pyaudio>=0.2.14",
     "pydub>=0.25.1",
+    "pytest>=8.3.5",
     "python-dotenv>=1.1.0",
     "pywav>=1.1",
     "requests>=2.32.3",
@@ -30,3 +31,16 @@ dependencies = [
 
 [tool.mypy]
 ignore_missing_imports = true
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
+
+get-version = ["py3.13"]
+line-length = [90]
+src = ["tests"]
+
+[tool.pytest.ini_options]
+addopts = "-vvv"
+testpaths = "tests"
